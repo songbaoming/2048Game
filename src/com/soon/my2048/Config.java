@@ -1,0 +1,8 @@
+package com.soon.my2048;
+
+public class Config {
+
+	public static final int BORDER_WIDTH = 20;
+	public static final int LINES = 4;
+	public static int CARD_WIDTH = 0;
+}

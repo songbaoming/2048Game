@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="48sp"
+                android:text="@string/app_name"/>
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/illustration"/>
+            
+        </LinearLayout>
+        
+       <TableLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" >
+            
+            <TableRow>
+
+                <LinearLayout 
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:background="#bbada0"
+		            android:layout_weight="1"
+		            android:orientation="vertical"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:layout_marginTop="20dp"
+		            android:layout_marginBottom="20dp">
+                    <TextView 
+	                	android:layout_height="wrap_content"
+	                	android:layout_width="wrap_content"
+	                	android:layout_gravity="center"
+		                android:textSize="12sp"
+		                android:textColor="#88ffffff"
+		                android:text="@string/cur_score"/>
+	                <TextView 
+	                    android:id="@+id/cur_score"
+		                android:layout_height="wrap_content"
+	    	            android:layout_width="wrap_content"
+	    	            android:layout_gravity="center"
+	    	            android:textSize="24sp"
+	    	            android:textColor="#ffffff"
+	        	        android:text="0"/>
+                </LinearLayout>
+                
+                <LinearLayout 
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:background="#bbada0"
+		            android:orientation="vertical"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:layout_marginTop="20dp"
+		            android:layout_marginBottom="20dp">
+		            <TextView
+	                    android:layout_height="wrap_content"
+	                    android:layout_width="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:textSize="12sp"
+	                    android:textColor="#88ffffff"
+	                    android:text="@string/best_score" />
+	                <TextView
+	                    android:id="@+id/best_score"
+	                    android:layout_height="wrap_content"
+	                    android:layout_width="wrap_content"
+	                    android:layout_gravity="center"
+	                    android:textSize="24sp"
+	                    android:textColor="#ffffff"
+	                    android:text="0" />
+                    
+                </LinearLayout>
+                
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+                    android:background="#bbada0"
+	    	        android:textSize="24sp"
+	    	        android:textColor="#ffffff"
+                    android:text="@string/restart" />
+            </TableRow>
+            
+        </TableLayout>
+        
+    </LinearLayout>
+    
+    <com.soon.my2048.GameContainer 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        
+        <FrameLayout
+            android:id="@+id/game_container"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="bottom" >
+	        
+	        <com.soon.my2048.GameView
+	            android:id="@+id/game_view"
+	        	android:layout_width="match_parent"
+	        	android:layout_height="match_parent"/>
+	        <com.soon.my2048.AnimLayer
+	            android:id="@+id/anim_view"
+	        	android:layout_width="match_parent"
+	        	android:layout_height="match_parent"/>
+	        
+	    </FrameLayout>
+    </com.soon.my2048.GameContainer>
+    
+
+</LinearLayout>

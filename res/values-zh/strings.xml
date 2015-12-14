@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">设置</string>
+	<string name="cur_score">分数</string>
+	<string name="best_score">最高分</string>
+	<string name="restart">重新开始</string>
+	<string name="illustration">作者：soon</string>
+</resources>
